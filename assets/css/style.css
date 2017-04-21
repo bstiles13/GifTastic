@@ -1,0 +1,50 @@
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	background: linear-gradient(500deg, sandybrown, white, skyblue);
+	background-size: 1000% 1000%;
+	animation: AnimationName 20s ease infinite;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	width: 80%;
+	height: 100%;
+	background: radial-gradient(white, white 40%, lemonchiffon);
+	border-right: 3px solid lightslategray;
+	border-left: 3px solid lightslategray;  
+	overflow: scroll;
+}
+
+.buttons {
+	min-height: 100px;
+	border-bottom: 3px solid lightslategray;
+}
+
+.row {
+	/*background-color: yellow;*/
+}
+
+.gif {
+	height: 200px;
+	vertical-align: top;
+}
+
+.results, .search {
+	min-height: 1000px;
+}
+
+.search {
+	border-left: 3px solid lightslategray;
+}
