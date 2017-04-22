@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var object;
+	var array = ["Superman", "Batman", "Starlord", "Hulk", "Yoda"];
 
 	$("#field").focusin(function() {
 		$(this).attr("value", "");
@@ -9,15 +9,25 @@ $(document).ready(function() {
 		$(this).attr("value", "Placeholder");
 	});
 
+	function makeButtons() {
+		$(".buttons").find($("input")).remove();
+		for (var i = 0; i < array.length; i++) {
+			var add = $("<input class='new btn btn-warning' type='button' data='" + array[i] + "'>").attr("value", array[i]);
+			add.appendTo(".buttons");
+		};
+	}
+
+	makeButtons();
+
 	$("#submit").on("click", function(event) {
 		event.preventDefault();
 		var input = $("#field").val();
-		var add = $("<input class='new' type='button' data='" + input + "'>").attr("value", input);
-		add.appendTo(".buttons");
+		array.push(input);
+		makeButtons();
 	});
 
 	$(document).on("click", ".new", function() {
-		$(".results").empty();
+		$(".results").find("div").remove();
 		var data = $(this).attr("data");
 		var url = "http://api.giphy.com/v1/gifs/search?q=" + data + "&api_key=dc6zaTOxFJmzC";
 		$.ajax({
@@ -28,7 +38,10 @@ $(document).ready(function() {
 			for (var i = 0; i < 10; i++) {
 			var idStill = response.data[i].images.original_still.url;
 			var idAnimate = response.data[i].images.original.url;
-			$(".results").append("<img class='gif' src='" + idStill + "' alt='" + idAnimate + "'>");
+			var gifDiv = $("<div class='gifDiv'>");
+			gifDiv.append("<span class='rating'>Rating: " + response.data[i].rating + "</span><br>");
+			gifDiv.append("<img class='gif' src='" + idStill + "' alt='" + idAnimate + "'>");
+			$(".results").append(gifDiv);
 		};
 		});
 	});

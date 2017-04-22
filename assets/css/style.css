@@ -1,50 +1,78 @@
-@keyframes AnimationName {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-
 * {
 	box-sizing: border-box;
+	font-family: "Comic Sans MS", "Comic Sans MS5", cursive;
+	color: lemonchiffon;
 }
 
 html, body {
-	background: linear-gradient(500deg, sandybrown, white, skyblue);
-	background-size: 1000% 1000%;
-	animation: AnimationName 20s ease infinite;
 	height: 100%;
-	padding: 0;
-	margin: 0;
+	background-image: url("http://celebrationentertainment.com/wp-content/uploads/2015/09/superhero-background.jpg");
+	background-attachment: fixed;
+	background-size: 100% 100%;
 }
 
 .container {
-	margin: 0 auto;
 	width: 80%;
-	height: 100%;
-	background: radial-gradient(white, white 40%, lemonchiffon);
-	border-right: 3px solid lightslategray;
-	border-left: 3px solid lightslategray;  
-	overflow: scroll;
+	height: 100%
+	margin: 0 auto;
+	padding: 0;
+	background-color: black;
+	border-radius: 5px;
 }
 
 .buttons {
+	width: 100%;
 	min-height: 100px;
-	border-bottom: 3px solid lightslategray;
+	box-shadow: 0 5px 5px orange;
+	margin-bottom: 20px;
 }
 
-.row {
-	/*background-color: yellow;*/
-}
-
-.gif {
-	height: 200px;
+.buttons img {
+	height: 100px;
+	float: right;
 	vertical-align: top;
 }
 
-.results, .search {
-	min-height: 1000px;
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 500px;
+}
+
+.results {
+	flex: 2;
 }
 
 .search {
-	border-left: 3px solid lightslategray;
+	flex: 1;
+}
+
+.buttons, .results, .search {
+	padding: 10px;
+
+}
+
+.btn {
+	margin: 10px 10px 0 0;
+}
+
+.gif {
+	max-height: 200px;
+}
+
+.gifDiv {
+	margin: 10px 0 0 10px;
+	padding: 10px;
+	display: inline-block;
+	border: 5px solid dodgerblue;
+	border-radius: 5%;
+}
+
+input {
+	color: darkgray;
+}
+
+h1 {
+	font-family: "Comic Sans MS", "Comic Sans MS5", cursive;
+	padding-bottom: 10px;
 }
