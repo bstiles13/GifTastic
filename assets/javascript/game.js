@@ -29,7 +29,8 @@ $(document).ready(function() {
 	$(document).on("click", ".new", function() {
 		$(".results").find("div").remove();
 		var data = $(this).attr("data");
-		var url = "https://api.giphy.com/v1/gifs/search?q=" + data + "&api_key=dc6zaTOxFJmzC";
+		var rating = "pg-13";
+		var url = "https://api.giphy.com/v1/gifs/search?q=" + data + "&rating=" + rating + "&api_key=dc6zaTOxFJmzC";
 		$.ajax({
 			url: url,
 			method: "GET"

@@ -40,7 +40,7 @@ html, body {
 }
 
 .results {
-	flex: 2;
+	flex: 4;
 }
 
 .search {
