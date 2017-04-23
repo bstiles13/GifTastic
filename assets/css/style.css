@@ -1,3 +1,9 @@
+/*@keyframes animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}*/
+
 * {
 	box-sizing: border-box;
 	font-family: "Comic Sans MS", "Comic Sans MS5", cursive;
@@ -10,6 +16,14 @@ html, body {
 	background-attachment: fixed;
 	background-size: 100% 100%;
 }
+
+/*.background {
+	height: 100%;
+	width: 100%;
+	background: radial-gradient(rgba(29, 137, 245, 0.3), rgba(255, 255, 255, 0.3));
+	background-size: 300% 300%;
+	animation: animation 15s linear infinite;
+}*/
 
 .container {
 	width: 80%;
@@ -41,6 +55,7 @@ html, body {
 
 .results {
 	flex: 4;
+	border-right: 1px solid orange;
 }
 
 .search {
