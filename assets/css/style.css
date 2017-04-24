@@ -48,13 +48,14 @@ html, body {
 }
 
 .content {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 	min-height: 500px;
 }
 
 .results {
-	flex: 4;
+	flex: 3;
 	border-right: 1px solid orange;
 }
 
